@@ -13,6 +13,3 @@ mongoose.connect(MONGODB_URI, options)
   .then(
     server.start(PORT)
   )
-
-
-

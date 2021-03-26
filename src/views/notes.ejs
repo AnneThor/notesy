@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/header.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link type="text/css" rel="stylesheet" href="/footer.css">
+      <link type="text/css" rel="stylesheet" href="/notes.css">
+    <title>Notesy</title>
+</head>
+
+<body>
+
+<%- include('partials/header'); -%>
+
+<h1>Welcome XXX!</h1>
+<p>Here are your saved notes</p>
+
+<ul id="notes-display-list">
+<% reply.forEach(note => { %>
+  <li>
+    <p>Title: <%= note.title %></p>
+    <p>Body: <%= note.body %></p>
+  </li>
+
+<% }) %>
+</ul>
+
+<p>Add a new notes</p>
+  <form id="new-note-form" action="/signup" method="POST">
+    <p>Create a new note: </p>
+      <label for="title">Title: </label>
+          <input type="text" name="note-title" placeholder="Title">
+      <label for="note-body">Note Contents: </label>
+          <input type="text" name="note-body" placeholder="Enter the note contents">
+      <button type="submit">Save Note</button>
+  </form>
+</div>
+
+<%- include('partials/footer') -%>
+
+</body>
+</html>

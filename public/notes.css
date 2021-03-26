@@ -1,0 +1,13 @@
+#notes-display-list {
+  list-style-type: none;
+  text-align: left;
+}
+
+#notes-display-list li {
+  display: flex;
+  flex-direction: row;
+}
+
+#notes-display-list li>p {
+  margin: 0 5px;
+}

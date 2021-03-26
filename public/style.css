@@ -1,21 +1,39 @@
 html {
-    box-sizing: border-box;
-    background-color: rgb(33, 42, 49);
-  }
+  box-sizing: border-box;
+  background-color: rgba(242, 241, 239, 1);
+  color: black;
+  font-size: 10px;
+}
 
 body {
-    text-align: center;
-    font-size: 14pt;
+  padding-top: 10vh;
+  text-align: center;
+  font-size: 1.4em;
 }
 
 form {
-    margin: auto;
-    text-align: center;
-    color: aquamarine;
+  padding: 5px 0;
+  margin: auto;
+  text-align: center;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
 }
 
-input, button {
-    border-radius: 5px;
-    padding: 10px;
+button {
+  border-radius: 5px;
+  min-height: 10px;
+  padding: 5px 0px;
+  margin; 5px 0px;
 }
 
+input {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#form-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

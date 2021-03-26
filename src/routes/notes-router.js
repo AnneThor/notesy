@@ -37,7 +37,7 @@ aclRouter.param('model', (req, res, next) => {
 })
 
 // tokens are required on all model routes
-aclRouter.use(bearerAuth);
+// aclRouter.use(bearerAuth);
 
 // anyone with a valid token can use get methods
 aclRouter.get('/:model', handleGet);
@@ -51,13 +51,15 @@ aclRouter.patch('/:model/:id', restrict('update'), handleUpdate);
 aclRouter.delete('/:model/:id', restrict('delete'), handleDelete);
 
 async function handleGet(req, res) {
+  console.log("entered notes router, handleGet");
   let reply;
   if (req.params.id) {
     reply = await req.model.get(req.params.id)
   } else {
     reply = await req.model.get();
   }
-  res.status(200).json(reply);
+  console.log("reply from inside handleGet notes", reply);
+  res.render(process.cwd() + '/src/views/notes.ejs', { reply })
 }
 
 async function handleCreate(req, res) {

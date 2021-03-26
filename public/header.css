@@ -1,0 +1,32 @@
+#nav-bar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  min-height: 10px;
+  max-height: 10vh;
+  background-color: rgba(191, 191, 191, .5);
+}
+
+#nav-list {
+  padding-right: 5px;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2em;
+}
+
+.nav-list-item a:hover {
+  color: red;
+  font-size: 1.3em;
+  transition: 150ms;
+}
+
+.nav-list-item {
+  margin: 0 5px;
+}
+
+.nav-list-item a {
+  text-decoration: none;
+  color: black;
+}

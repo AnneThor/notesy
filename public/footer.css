@@ -1,0 +1,15 @@
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100vw;
+  max-height: 10vh;;
+  min-height: 10px;
+  background-color: rgba(191, 191, 191, .5);
+}
+
+#footer-list {
+  list-style-type: none;
+  text-align: right;
+  padding-right: 5px;
+}

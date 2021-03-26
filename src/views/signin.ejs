@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/header.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
+    <link type="text/css" rel="stylesheet" href="/footer.css">
+    <title>Notesy</title>
+
+
 </head>
+
 <body>
-    <form action="/signin" method="POST">
-<<<<<<< Updated upstream
-        <label for="username">Username</label>
-            <input type="text" name="username">
-        <label for="password">Password</label>
-            <input type="text" name="password">
-        <button type="submit">Sign In</button>
-=======
-        <label for="username"> Username: </label>
-        <input type="text" id= "username" name="username">
-        <label for="password"> Password </label>
-        <input type="text" id="password" name="password">
-        <button type="submit"> Sign In </button>
->>>>>>> Stashed changes
-    </form>
+
+<%- include('partials/header'); -%>
+
+<h1>Welcome to Notesy</h1>
+<h2>Notesy is a place where you can make a secure account and create, update, and delete notes</h2>
+<p>Sign up or sign in to reach the notes layout</p>
+
+<div id="form-grid">
+  <form id="sign-in-form" action="/signin" method="POST">
+      <h3>Sign in for returning users:</h3>
+      <label for="username"> Username: </label>
+      <input type="text" id= "signin-username" name="username" placeholder="Enter Username">
+      <label for="password"> Password: </label>
+      <input type="text" id="password" name="password" placeholder="Enter Your Username">
+      <button id="sign-in-submit" type="submit" value="submit"> Sign In </button>
+  </form>
+
+  <form id="sign-up-form" action="/signup" method="POST">
+    <h3>New to Notesy? Sign up now!</h3>
+      <label for="username">Create a Username: </label>
+          <input type="text" name="username" placeholder="Username is required">
+      <label for="password">Create a Password: </label>
+          <input type="text" name="password" placeholder="Password is required">
+      <button type="submit">Sign Up</button>
+  </form>
+</div>
+
+<%- include('partials/footer') -%>
+<script src='scripts/set-headers.js'></script>
 </body>
 </html>

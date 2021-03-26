@@ -1,10 +1,10 @@
 {
-  "name": "api-server---auth-system",
+  "name": "notesy",
   "version": "1.0.0",
   "description": "Node Express Mongoose app with simple login/logout and acl controlled route accesss",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
